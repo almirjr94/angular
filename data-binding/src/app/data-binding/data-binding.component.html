@@ -47,7 +47,7 @@
   </article>
 </section>-->
 
-<section class="event-binding">
+<!--<section class="event-binding">
   <article>
     <h3>Event Binding</h3>
     <div class="container">
@@ -74,4 +74,22 @@
       >Passe o Mouse</span>
     </div>
   </article>
+</section>-->
+
+<!--<app-meu-form></app-meu-form>-->
+
+<section class="input-output-properties">
+
+  <article>
+    <h3>Input/Output Properties</h3>
+
+    <app-curso [nome]="nomeDoCurso"></app-curso>
+
+    <contador [valor]="valorInicial"
+              (mudouValor)="onMudouValor($event)"
+    >
+    </contador>
+
+  </article>
+
 </section>
