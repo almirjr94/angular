@@ -1,0 +1,77 @@
+<!--<section class="property-binding">
+
+ <article>
+        <h3>Interpolation / Interpolação</h3>
+        <p>String renderizada com Interpolação: {{ url }}</p>
+        <p>Resultado de 1+1 é: {{1+1}}</p>
+    </article>
+
+    <article>
+      <h3>Property-Binding</h3>
+      <img src="{{ urlImage }}" alt="">
+      <img [src]="urlImage" alt="">
+      <img bind-src="urlImage" alt="">
+      
+    </article>-->
+
+<!--<article>
+    <h3>Class and Style Binding</h3>
+    <div>
+      Selecione uma Opção:
+      <select #classe (change)="0">
+        <option value="alert-primary">Primary</option>
+        <option value="alert-secondary">Secondary</option>
+        <option value="alert-success">Success</option>
+        <option value="alert-danger">Danger</option>
+      </select>
+      <br><br>
+
+      <div class="alert {{ classe.value }}" role="alert">
+        TEY TEY TEY
+      </div>
+
+      <div class="alert" role="alert" [class.alert-primary]="classe.value == 'alert-primary'">
+          A simple primary alert—check it out!
+        </div>
+        <div class="alert" role="alert" [class.alert-secondary]="classe.value == 'alert-secondary'">
+          A simple secondary alert—check it out!
+        </div>
+        <div class="alert" role="alert" [class.alert-success]="classe.value == 'alert-success'">
+          A simple success alert—check it out!
+        </div>
+        <div class="alert alert-danger" role="alert" 
+          [style.display]="classe.value == 'alert-danger' ? 'block':'none'">
+          A simple danger alert—check it out!
+        </div>
+    </div>
+  </article>
+</section>-->
+
+<section class="event-binding">
+  <article>
+    <h3>Event Binding</h3>
+    <div class="container">
+
+      <button (click)="getBotaoClicado()" class="btn btn-primary">Clica Aqui!</button>
+      <br>
+      <br>
+
+      <input type="text" 
+      (keyup)="onKeyUP($event)" 
+      (keyup.enter)="salvarValor(campoInput.value)" 
+      (blur)="salvarValor(campoInput.value)"
+      #campoInput/>
+
+      <p>Valor Atual: {{ valorAtual }}</p>
+      <p>Valor Salvo: {{ valorSalvo }}</p>
+
+      <br><br>
+
+      <span
+      (mouseover)="onMouseOverOut()"
+      (mouseout)="onMouseOverOut()"
+      [class.highlight]="isMouseOver"
+      >Passe o Mouse</span>
+    </div>
+  </article>
+</section>
